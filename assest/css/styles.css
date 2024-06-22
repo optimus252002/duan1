@@ -1,0 +1,512 @@
+/* 
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Từ tổng quan đến chi tiết
+*/
+
+/* 
+
+1. Vị trí
+2. Kích thước (wight, height)
+3. Màu sắc 
+4. Kiểu dáng (kiểu chữ, hình tròn , hình vuông,...
+
+*/
+
+
+
+
+/* reset css */ 
+.clear{
+    clear: both;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+#main {
+
+}
+#header {
+    --height: 46px;
+    height: var(--height);
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+#nav{
+   display: inline-block;
+}
+
+#nav > li{
+    display:inline-block ;
+    position: relative;
+    text-transform: uppercase;
+    
+}
+
+#nav > li:hover .subnav{
+    display: block;
+}
+#nav li a {
+    color: #c93d3d;
+    line-height: var(--height);
+    text-decoration: none;
+    padding: 0 24px;
+    display: block;
+    
+}
+#nav > li:hover > a {
+    color: #000;
+    background-color: #ccc;
+}
+#nav .subnav {
+    display: none;
+    top:100%;
+    left: 0;
+    position: absolute;
+    background-color: #fff;
+    list-style-type: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .subnav a{
+    min-width: 150px;
+    padding: 0 12px ;
+    color: #000;
+    text-transform: none;
+    line-height: 38px;
+    
+}
+
+#nav .subnav li:hover a {
+    color: #000;
+    background-color: #ccc;
+    
+}
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+#header .mobile-menu,
+#header .search-btn {
+   
+    float: right;
+}
+#header .mobile-menu:hover .menu-icon{
+    background-color: #ccc;
+    color: #000;
+}
+#header .search-btn:hover{
+    background-color: red;
+    cursor: pointer;
+}
+#header .menu-icon,
+#header .search-icon {
+    color: #fff;
+    font-size: 15px;
+    line-height: 46px;
+    padding: 0 21px;
+    
+}
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assest/img/slider\ 1.jpg') top center / cover no-repeat;
+    position: relative;
+}
+#slider .text-content {
+    color: #fff;
+    position: absolute;
+    bottom: 47px;
+    width: 100%;
+    text-align: center;
+}
+#slider .text-heading {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 25px;
+}
+#slider .text-description {
+    font-size: 15px;
+    color: antiquewhite;
+} 
+#content {
+    
+}
+#content .content-section {
+    width: 1024px;
+    max-width: 100%;
+    padding: 64px 0 ;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 16px;
+    padding-left: 8px;
+}
+#content .section-heading{
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 4px;
+    
+}
+#content .section-sub-heading {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-style:italic;
+    opacity: 0.6;
+}
+#content .about-text{
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
+#content .member-list {
+    margin: 48px 0;
+    overflow: hidden;
+}
+#content .member-item {
+    float: left;
+    width: 33.333%;
+    text-align: center;
+    font-size: 15px;
+   
+}#content .member-img {
+    width: 154px;
+    margin-top: 15px;
+    
+    border-radius: 4px;
+}
+.tour-section {
+    background-color: #000;
+    padding-bottom: 50px;
+}
+.tour-section .content-section {
+    color: #fff;
+}
+.sticket-list {
+    background-color: #fff;
+    color: #000;
+    margin-top: 40px;
+}
+.sticket-list li {
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd ;
+    color: #757575;
+    list-style-type: none;
+   
+}
+.sticket-list .sold-out {
+    font-size: 15px;
+    padding: 3px 4px;
+    color: #fff;
+    background-color: #f44336;
+    margin-left: 10px;
+}
+.sticket-list .amount {
+    font-size: 15px;
+    float: right;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -2px;
+    margin-right: 24px;
+    
+}
+.place-list {
+    margin: 28px -8px 0;
+    padding-bottom: 60px ;
+}
+.place-list .place-item {
+    margin: 36px 0px 1px 0;
+    float: left;
+    
+
+}
+.place-list .place-item > img:hover{
+    opacity: 0.6;
+}
+.place-list .place-body {
+    background-color: #fff;
+    color: #000;
+    padding: 15px;
+    margin: 0 8px;
+    font-size: 15px;
+}
+.place-list .place-photo {
+   width: 100%;
+   padding: 0 8px;
+   display: block;
+}
+.place-list .place-heading {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.content-place {
+    color: #757575;
+    opacity: 0.6;
+    margin-bottom: 15px;
+}
+.nav-content-place {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+.buy-place {
+    background-color: #000;
+    color: #ccc;
+    padding: 10px 16px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    font-weight: 530;
+    display:inline-block ;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+.buy-place:hover {
+    background-color: #ccc;
+    color: #000;
+    
+}
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal.open {
+    display: flex;
+}
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.25s;
+}
+.modal-header {
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+.modal-icon-heading {
+    margin-right: 16px;
+}
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+}
+.modal-close:hover {
+    background-color: #ccc;
+    color: #000;
+}
+.modal-body {
+  
+    padding: 16px;
+}
+.modal-lable {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 24px;
+}
+#buy-tickets {
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: #009688;
+    border: none;
+    padding: 16px;
+    text-transform: uppercase;
+}
+#buy-tickets:hover {
+    background-color: #ccc;
+    color: #000;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.modal-footer {
+    padding: 0 16px 32px;
+    text-align: right;
+    font-size: 15px;
+}
+.modal-footer a {
+    color: #2196f3;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-168px);
+    }
+    to {
+        opacity: 1 ;
+        transform: translateY(0);
+    }
+}
+.content-contact {
+    display: inline-block;
+    width: 100%;
+    line-height: 1.5;
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+.contact{
+    float: left;
+    font-size: 18px;
+}
+.icon-contact{
+    padding-right: 16px;
+    font-size: 15px;
+}
+.information {
+    float: right;
+}   
+.name-email{
+    margin-bottom: 8px;
+}
+.name {
+    
+    margin-right: 8px;
+}
+.email {
+    
+    margin-left: 8px;
+}
+.message-row{
+   
+    width: 100%;
+    margin-bottom: 16px;
+}
+.submit-send {
+    float: right;
+    border: none;
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    
+}
+.submit-send:hover {
+    background-color: #ccc;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+.information input {
+    padding: 11px;
+    border: 1px solid #ccc;
+}
+.img-map {
+    width: 100%;
+    
+}
+.social{
+    margin: 8px;
+    font-size: 24px;
+}
+.social i {
+    color: #000;
+}
+.social i:hover {
+    opacity: 0.3;
+}
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+    opacity: 0.7;
+}
+.end-footer{
+    
+    font-size: 15px;
+    margin: 16px 0;
+    color: #000;
+}
+.link-footer{
+    color: #000;
+}
+
+
+/* Mobile */
+@media (max-width :739px) {
+
+    #nav > li{
+         display: block;
+    }
+    #header {
+        overflow: hidden;
+    }
+    .search-btn {
+        display: none;
+    }
+    .place-list .place-item {
+        width: 100%;
+    }
+    
+
+}
+
+
+
+/* Table */
+@media (min-width:740px) and (max-width: 1023px) {
+    .place-list .place-item {
+        width: 50%;
+    }
+}
+
+
+
+/* PC */
+@media (min-width: 1024px) {
+    #header .mobile-menu{
+        display: none;
+    }
+    .place-list .place-item {
+        width: 25%;
+    }
+}
+
+
+
+
+
+
+
+
+
